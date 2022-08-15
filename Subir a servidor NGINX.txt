@@ -1,0 +1,33 @@
+--Digital Ocean Server - CONSOLE--
+
+
+*sudo apt update
+
+*sudo apt upgrade
+
+*Instalamos NVM = curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+
+	*source ~/.bashrc
+	*nvm install node
+	*node --version
+
+*sudo apt install nginx 
+
+*cd /var/www/html/
+
+*nano index.nginx-debian.html
+
+*Clonas repositorio dentro de la carpeta "html"
+
+*Notes = Algunas veces si hay conflicto = npm install -f
+
+*Abrimos file para redireccionar a proyecto = cd /etc/nginx/sites-available/
+	*nano default
+	*Buscamos el apartado "root" y ponemos la ubicación del proyecto
+	
+	*Luego debajo del apartado "server_name _;" Agregar...
+	"error_page 404 /;"
+
+*sudo nginx -t
+
+*sudo service nginx restart
